@@ -1,0 +1,85 @@
+$primary: #344e41;
+$secondary: #588157;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.lgsu-background {
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../public/background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(70%);
+    z-index: -1;
+  }
+}
+
+.bg-gray {
+  background-color: $gray-200;
+}
+
+.lgsu-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 10%;
+}
+
+.code-input {
+  min-height: 3.5em;
+}
+
+.character--selected {
+  outline: 2px solid $secondary-border-subtle;
+}
+
+.forgotpw-bg {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 0;
+    left: 0;
+    background-color: $secondary;
+  }
+}
+
+.nocursor {
+  caret-color: transparent;
+  cursor: none!important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-scale-medium:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
